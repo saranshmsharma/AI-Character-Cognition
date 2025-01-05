@@ -1,0 +1,66 @@
+.character-interaction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.character-image {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.character-image.speaking {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.character-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.speech-bubble {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 80%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.speech-bubble:before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  border: 10px solid transparent;
+  border-bottom-color: #ffffff;
+  transform: translateX(-50%);
+}
+
+.user-input {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+}
+
+.user-input .p-inputtext {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.p-button {
+  margin-left: 5px;
+}
